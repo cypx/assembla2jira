@@ -389,6 +389,10 @@ local function grok_object(self, text, start, etc)
    if text:sub(i,i) == '}' then
       return VALUE, i + 1
    end
+
+   --cyp return table index
+   local tableIdx = 1
+   --cyp
    local text_len = text:len()
    while i <= text_len do
       local key, new_i = grok_string(self, text, i, etc)
@@ -403,7 +407,9 @@ local function grok_object(self, text, start, etc)
 
       local val, new_i = grok_one(self, text, i)
 
-      VALUE[key] = val
+      --VALUE[key] = val
+      table.insert(VALUE, tableIdx, val)
+      tableIdx = tableIdx + 1
 
       --
       -- Expect now either '}' to end things, or a ',' to allow us to continue.

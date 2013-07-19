@@ -82,14 +82,10 @@ settings =
 		{
 		},
 
-		["Accepted"] =
+		["In Progress"] =
 		{
-		},
-
-		["Test"] =
-		{
-			["workflow_action"] = "Resolve Issue",
-			["resolution"] = "Fixed",
+			["workflow_action"] = "Start Progress",
+			["resolution"] = "Work in progess",
 			["set_assignee"] = true,
 		},
 
@@ -107,18 +103,42 @@ settings =
 			["set_assignee"] = true,
 		},
 
-		["In Progress"] =
+		["To test"] =
+		{
+			["resolution"] = "To test",
+		},
+
+		["Waiting information"] =
 		{
 			["workflow_action"] = "Start Progress",
 			["set_assignee"] = false,
 		},
 
-		["On Hold"] =
+		["To implement"] =
 		{
-			["workflow_action"] = "Resolve Issue",
-			["resolution"] = "Incomplete",
+			["workflow_action"] = "Start Progress",
+			["set_assignee"] = false,
+		},
+
+		["Duplicate"] =
+		{
+			["workflow_action"] = "Close Issue",
+			["resolution"] = "Duplicate",
 			["set_assignee"] = true,
 		},
+
+		["Test pending"] =
+		{
+			["resolution"] = "To test",
+			["set_assignee"] = false,
+		},
+
+		["Waiting subtask treatment"] =
+		{
+			["resolution"] = "Waiting subtask treatment",
+			["set_assignee"] = false,
+		},
+
 	},
 
 	["links"] =
